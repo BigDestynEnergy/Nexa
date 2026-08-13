@@ -1,0 +1,122 @@
+:root {
+    
+    --nexa-primary: #2f7d52;
+    --nexa-primary-dark: #246441;
+    --nexa-primary-light: #eaf5ee;
+
+   
+    --nexa-teal: #4ecca3;
+    --nexa-teal-light: #76d7b8;
+    --nexa-teal-dark: #34b38a;
+    --nexa-teal-deep: #008181;
+
+  
+    --nexa-text: #252525;
+    --nexa-text-active: #111111;
+    --nexa-text-muted: #707070;
+    --nexa-text-inverse: #ffffff;
+    --nexa-text-muted-xl:#a9a9a9;
+
+    
+    --nexa-bg: #f8f8f5;
+    --nexa-surface: #ffffff;
+    --nexa-surface-muted: #f1efef;
+    --nexa-surface-subtle: #dfdede;
+    --nexa-surface-blue: #f0f8ff;
+    --nexa-surface-blue-overlay: #00427c2c;
+
+    
+    --nexa-border: #e5e5e1;
+    --nexa-border-muted: #d8dee4;
+
+  
+    --nexa-dark: #181818;
+    --nexa-dark-surface: #232931;
+    --nexa-dark-deep: #0e1013;
+    --nexa-dark-muted: #333333;
+
+    
+    --nexa-black: #000000;
+    --nexa-white: #ffffff;
+
+  
+    --nexa-warning: #ff7600;
+    --nexa-warning-hover: #f37404;
+
+    --nexa-danger: #c00010;
+
+    --nexa-success: #1db954;
+
+    --nexa-accent: #615a80;
+
+
+  
+    --nexa-gradient: linear-gradient(
+        76deg,
+        var(--nexa-surface),
+        var(--nexa-surface-blue),
+        var(--nexa-border-muted),
+        var(--nexa-surface-muted),
+        var(--nexa-accent)
+    );
+
+    --nexa-radius-xs: 4px;
+    --nexa-radius-sm: 8px;
+    --nexa-radius-md: 14px;
+    --nexa-radius-lg: 18px;
+    --nexa-radius-xl: 32px;
+    --nexa-radius-full: 999px;
+
+
+   
+    --nexa-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+
+    --nexa-shadow-lg:
+        0 20px 60px rgba(0, 0, 0, 0.06);
+
+        --ig: linear-gradient(
+            45deg,
+            #FCAF45 0%,
+            #F77737 25%,
+            #E1306C 50%,
+            #C13584 75%,
+            #833AB4 100%
+        );
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(47, 125, 82, 0.07),
+        var(--nexa-bg)
+    );
+
+    color: var(--nexa-text-active);
+    font-family: "Google Sans", sans-serif;
+}
+
+
+input,
+select,
+button,
+a,
+textarea {
+    font-family: inherit;
+    outline: none;
+    transition: var(--nexa-transition-lg);
+}
+
+
+button {
+    cursor: pointer;
+}

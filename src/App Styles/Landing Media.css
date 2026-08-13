@@ -1,0 +1,195 @@
+
+@media (max-width: 1000px){
+    .business-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-it-works-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-promo {
+        grid-template-columns: 1fr;
+        padding: 45px;
+    }
+}
+
+@media (max-width: 568px){
+    .landing-topbar{
+        width: calc(100% - 32px);
+        height: 70px;
+    }
+
+    .landing-topbar h2{
+        font-size: 22px;
+    }
+
+    .landing-topbar button{
+        padding: 9px 14px; font-size: 12px;
+    }
+
+    .version{
+        margin-top: 40px;
+    }
+
+    .hero-section{
+        width: calc(100% -32px);
+    }
+
+    .hero-section h1 {
+        font-size: clamp(42px, 13vw, 65px);
+        letter-spacing: -2.8px;
+    }
+
+    .hero-section p{
+        margin-top: 22px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cta-buttons {
+        width: calc(100% - 32px);
+
+        margin: 28px auto 0;
+
+        flex-direction: column;
+    }
+    .hero-section-businesses {
+        width: calc(100% - 32px);
+
+        margin-top: 95px;
+    }
+
+    .businesses-heading {
+        display: block;
+    }
+
+    .businesses-heading h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .businesses-heading > p {
+        width: 100%;
+
+        margin-top: 18px;
+    }
+
+    .businesses-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 30px;
+    }
+
+    .business-card-image {
+        height: 230px;
+    }
+
+
+    /* How it works */
+
+    .how-it-works {
+        width: calc(100% - 32px);
+
+        margin-top: 100px;
+    }
+
+    .how-it-works-heading h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .how-it-works-heading p {
+        font-size: 14px;
+    }
+
+    .how-it-works-grid {
+        grid-template-columns: 1fr;
+
+        margin-top: 30px;
+    }
+
+    .how-it-works-card {
+        min-height: 230px;
+    }
+
+    .how-it-works-card h3 {
+        margin-top: 45px;
+    }
+
+
+    /* Dashboard */
+
+    .dashboard-promo {
+        width: calc(100% - 32px);
+
+        margin-top: 100px;
+
+        padding: 32px 22px;
+
+        border-radius: 24px;
+    }
+
+    .dashboard-promo-content h2 {
+        font-size: 36px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .dashboard-promo-content p {
+        font-size: 13px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .dashboard-stat {
+        min-height: 150px;
+    }
+
+
+    /* Final CTA */
+
+    .landing-final-cta {
+        width: calc(100% - 32px);
+
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    .landing-final-cta h2 {
+        font-size: 42px;
+
+        letter-spacing: -2px;
+    }
+
+    .landing-final-cta p {
+        font-size: 13px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .businesses-heading h2,
+    .how-it-works-heading h2 {
+        font-size: 32px;
+    }
+
+    .landing-final-cta h2 {
+        font-size: 36px;
+    }
+
+}

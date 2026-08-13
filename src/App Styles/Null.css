@@ -1,0 +1,18 @@
+.not-found{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown .3s ease;
+}
+
+.not-found svg{
+    font-size: 4rem;
+}
+
+.not-found p span{
+    cursor: pointer;
+    color: var(--accent-1);
+}
