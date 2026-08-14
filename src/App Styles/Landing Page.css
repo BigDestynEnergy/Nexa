@@ -349,7 +349,7 @@
   display: block;
   overflow: hidden;
   color: var(--nexa-text-muted);
-  font-family: monospace;
+  font-family: Manrope;
   font-size: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;

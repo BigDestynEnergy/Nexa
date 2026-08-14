@@ -42,6 +42,14 @@ export default function Signin(){
             return notify(1, "Please enter a valid password");
         }
 
+        startLoading(true);
+        setTimeout(() => {
+            setForm({email:"", password:""});
+            notify(2, `Welcome back ${form.email.split('@')[0]}`)
+            startLoading(false);
+            navigate("/home");
+        }, 3000);
+
     }
 
     return(
