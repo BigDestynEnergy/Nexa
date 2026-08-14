@@ -37,7 +37,7 @@ const businesses = [
   },
   {
     id: 4,
-    name: "Kaya Fitness",
+    name: "Hashtag Fitness",
     category: "Fitness & Wellness",
     location: "Blantyre, Malawi",
     description:

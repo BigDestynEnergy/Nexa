@@ -8,7 +8,7 @@ export default function NotFound(){
 
     return(
         <div className="not-found">
-            <GrAndroid/>
+            <GrAndroid style={{color:"var(--nexa-primary)"}}/>
             <h1>Error</h1>
             {location.pathname === '/admin' || location.pathname === "/Admin" ? 
             'Sorry you do not have authorization for this page' :

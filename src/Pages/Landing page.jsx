@@ -25,10 +25,13 @@ import {
 import businesses from "../Arrays/Businesses";
 import { howItWorks } from "../Arrays/works";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
 
     const learnMoreRef = useRef(null);
+
+    const navigate = useNavigate();
 
     const scrollToRef = () => {
         learnMoreRef.current?.scrollIntoView({
@@ -43,8 +46,8 @@ export default function LandingPage() {
       <div className="landing-topbar">
         <h2>Nexa</h2>
         <div className="btns">
-            <button>Sign in</button>
-            <button>Sign up</button>
+            <button onClick={()=>navigate("/signin")}>Sign in</button>
+            <button onClick={()=>navigate("/signup")}>Sign up</button>
         </div>
       </div>
 
@@ -65,11 +68,11 @@ export default function LandingPage() {
       </div>
 
       <div className="cta-buttons">
-        <button>
+        <button onClick={()=>navigate("/signup")}>
           Get Started <LuArrowUpRight />
         </button>
         <button onClick={scrollToRef}>
-            See how it works
+            Learn More
         </button>
       </div>
 
@@ -254,8 +257,6 @@ export default function LandingPage() {
             </div>
 
 
-            {/* ================= FINAL CTA ================= */}
-
             <div className="landing-final-cta">
 
                 <LuRocket />
@@ -271,7 +272,7 @@ export default function LandingPage() {
                     community or audience one simple place to find you.
                 </p>
 
-                <button>
+                <button onClick={()=>navigate("/signup")}>
                     Create your Nexa profile
                     <LuArrowUpRight />
                 </button>
@@ -281,7 +282,7 @@ export default function LandingPage() {
             <footer>
                 <h1>Ready to join us?</h1>
                 <p>Join other businesses, collectives, services and ventures in managing your digital presence without having a complex system</p>
-                <button>
+                <button onClick={()=>navigate("/signup")}>
                     Create A Business Account
                     <LuArrowUpRight/>
                     

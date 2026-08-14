@@ -7,6 +7,7 @@
     rgba(47, 125, 82, 0.07),
     var(--nexa-bg)
   );
+  animation: slideDown .3s ease;
 }
 
 .landing-topbar {
@@ -356,7 +357,7 @@
 
 .how-it-works {
   width: min(1180px, calc(100% - 48px));
-  margin: 150px auto 0;
+  margin: 160px auto 0;
 }
 
 .how-it-works-heading {
@@ -521,6 +522,7 @@
 .dashboard-stat:hover{
     background: rgba(255, 255,255, 0.09);
     transform: translateY(-4px);
+    border: 1px solid var(--nexa-text-muted-xl);
 }
 
 .dashboard-stat > svg {
