@@ -30,6 +30,7 @@ export default function Signin(){
             return notify(1, "Please enter your email");
         }
 
+        
          if(!form.email.includes("@")){
             return notify(1, "Please enter a valid email");
         }

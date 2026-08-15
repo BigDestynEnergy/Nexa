@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom"
 import "./App.css"
-import ApplicationRouter from "./Paths/Application Routes"
+import ApplicationRouter from "./Routes/Application Routes"
 import { LoadingProvider } from "./Contexts/Loading Context"
 import { PopupProvider } from "./Contexts/Popup context"
 

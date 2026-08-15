@@ -82,6 +82,12 @@
             #C13584 75%,
             #833AB4 100%
         );
+
+        --radial: radial-gradient(
+        circle at 50% 0%,
+        rgba(47, 125, 82, 0.07),
+        var(--nexa-bg)
+    );
 }
 
 
@@ -95,11 +101,7 @@
 body {
     min-height: 100vh;
 
-    background: radial-gradient(
-        circle at 50% 0%,
-        rgba(47, 125, 82, 0.07),
-        var(--nexa-bg)
-    );
+    background: var(--radial);
 
     color: var(--nexa-text-active);
     font-family: "Google Sans", sans-serif;
@@ -113,10 +115,10 @@ a,
 textarea {
     font-family: inherit;
     outline: none;
-    transition: var(--nexa-transition-lg);
+    transition: all .3s ease;
 }
-
 
 button {
     cursor: pointer;
+    border: 0;
 }

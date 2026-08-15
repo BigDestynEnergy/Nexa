@@ -1,5 +1,5 @@
-import "../App Styles/Landing Page.css";
-import "../App Styles/Landing Media.css";
+import "../Styles/Landing Page.css";
+import "../Styles/Landing Media.css";
 
 import {
   LuRocket,
@@ -22,8 +22,8 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 
-import businesses from "../Arrays/Businesses";
-import { howItWorks } from "../Arrays/works";
+import businesses from "../Utils/Businesses";
+import { howItWorks } from "../Utils/works";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 

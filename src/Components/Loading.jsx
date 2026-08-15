@@ -1,4 +1,4 @@
-import "../App Styles/Loading.css";
+import "../Styles/Loading.css";
 
 export default function Loading({isOpen}){
     if(!isOpen) return null;

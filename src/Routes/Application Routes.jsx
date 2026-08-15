@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "../Pages/Landing page";
-import NotFound from "../More/NotFound";
 import Signin from "../Forms/Sign in";
 import Signup from "../Forms/Sign up";
+import Homepage from "../Pages/Homepage";
 
 export default function ApplicationRouter(){
     return(
@@ -10,7 +10,7 @@ export default function ApplicationRouter(){
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/" element={<LandingPage/>}/>
-            <Route path="*" element={<NotFound/>}/>
+            <Route path="/home" element={<Homepage/>}/>
         </Routes>
     )
 }

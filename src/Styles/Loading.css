@@ -22,6 +22,7 @@
     background: transparent;
     backdrop-filter: blur(10px);
     align-items: center;
+
     justify-content: center;
 }
 
@@ -53,4 +54,25 @@
     100%{
         transform: rotate(360deg);
     }
+}
+
+.popup-overlay{
+    position: fixed;
+    left: 0;top: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay .card{
+    box-shadow: var(--nexa-shadow-sm);
+    border-radius: var(--nexa-radius-sm);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideDown .3s ease;
+    background: #fff;
 }

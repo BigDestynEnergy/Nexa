@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import Popup from "../Blocks/Popup";
+import Popup from "../Components/Popup";
 
 const Context = createContext();
 

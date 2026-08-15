@@ -1,4 +1,4 @@
-import "../App Styles/Null.css"
+import "../Styles/Loading.css"
 import { LuCircleCheck, LuTriangleAlert } from "react-icons/lu";
 
 export default function Popup({isOpen, msg,icon}){

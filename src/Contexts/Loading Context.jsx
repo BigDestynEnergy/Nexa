@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import Loading from "../Blocks/Loading";
+import Loading from "../Components/Loading";
 
 const Context = createContext();
 

@@ -1,4 +1,4 @@
-import "../App Styles/Landing Page.css";
+import "../Styles/Landing Page.css";
 import {
   LuRocket,
   LuMapPin,
