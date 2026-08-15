@@ -3,6 +3,8 @@ import LandingPage from "../Pages/Landing page";
 import Signin from "../Forms/Sign in";
 import Signup from "../Forms/Sign up";
 import Homepage from "../Pages/Homepage";
+import NotFound from "../Components/NotFound";
+import CreateBusiness from "../Create Business Pages/CreateBusiness";
 
 export default function ApplicationRouter(){
     return(
@@ -11,6 +13,8 @@ export default function ApplicationRouter(){
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/" element={<LandingPage/>}/>
             <Route path="/home" element={<Homepage/>}/>
+            <Route path="/create" element={<CreateBusiness/>}/>
+            <Route path="*" element={<NotFound/>}/>
         </Routes>
     )
 }

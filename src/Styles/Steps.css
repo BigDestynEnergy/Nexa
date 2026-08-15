@@ -1,0 +1,34 @@
+
+.topbar-container .steps{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.steps .step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steps .step .icon-number{
+    border: 1px solid var(--nexa-text-muted);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--nexa-radius-lg);
+    font-weight: 500;
+}
+
+.step .name{
+    font-size: 14px;
+    color: var(--nexa-text-muted);
+}
+
+.completed{
+    background: var(--nexa-primary);
+    color: var(--nexa-white);
+}

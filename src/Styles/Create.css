@@ -1,0 +1,70 @@
+.create{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.create .brand{
+    width: fit-content;
+    background: var(--nexa-primary-light);
+    color: var(--nexa-primary);
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.create-business-container{
+    margin: 30px auto 0;
+    width: min(1180px, calc(100% - 48px));
+    border: 2px solid var(--nexa-border);
+    padding: 24px; border-radius: 8px;
+}
+
+.topbar-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.topbar-container .top-layer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-layer .stepsof{
+    color: var(--nexa-primary);
+    font-weight: 500;
+    background: var(--nexa-primary-light);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.top-layer .bio{
+    font-size: 14px;
+}
+
+.topbar-container .progress{
+    width: 100%;
+    padding: 4px;
+    background: var(--nexa-border);
+    border-radius: var(--nexa-radius-md);
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topbar-container .progress .tube{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: var(--nexa-radius-md);
+    background: linear-gradient(to right, var(--nexa-primary-dark), var(--nexa-primary));
+    padding: 4px;
+    transition: all .3s ease;
+}

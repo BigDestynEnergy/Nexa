@@ -1,0 +1,28 @@
+.not-found{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.not-found svg{
+    font-size: 6rem;
+    color: var(--nexa-primary);
+    border: 1px solid var(--nexa-primary-dark);
+    background: var(--nexa-primary-light);
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.not-found .goto{
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.not-found .goto:hover{
+    color: var(--nexa-primary);
+}
