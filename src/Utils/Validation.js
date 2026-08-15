@@ -9,12 +9,16 @@ export const validateStep = (step, data) => {
             }
 
             if(!data.category.trim()){
-                errors.name = "Business category is required."
+                errors.category = "Business category is required."
             }
 
             if(!data.description.trim()){
-                errors.name = "Business description is required."
-            } 
+                errors.description = "Business description is required."
+            }
+
+            if(!data.businessType.trim()){
+                errors.businessType = "Please select a business type."
+            }
             break;
 
         case 2:
@@ -22,11 +26,11 @@ export const validateStep = (step, data) => {
         
         case 3:
             if(data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
-                errors.name = "Phone number is required."
+                errors.email = "Phone number is required."
             }
 
-            if(!data.phone.trim){
-                errors.name = "Create a unique URL."
+            if(!data.phone.trim()){
+                errors.phone = "Create a unique URL."
             }
 
             break;

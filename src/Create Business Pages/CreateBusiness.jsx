@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../Styles/Create.css";
-import { LuSparkles } from "react-icons/lu";
+import { LuArrowLeft, LuArrowRight, LuSparkles } from "react-icons/lu";
 import Steps from "./Steps";
 import BasicsStep from "./Basics";
 import BrandingStep from "./Branding";
@@ -26,13 +26,13 @@ export default function CreateBusiness(){
     email: "",
     website: "",
     address: "",
-    city: "",
+    city: "", 
     country: "Malawi",
-    mapUrl: "",
+    url: "",
     slug: ""
 });
 
-const [currentStep, setCurrentStep] = useState(1);
+const [currentStep, setCurrentStep] = useState(6);
 
 const [errors, setErrors] = useState({});
 
@@ -113,24 +113,27 @@ const bioText = ()=>{
                     <Steps currentStep={currentStep}/>
                 </div>
 
-                {currentStep === 1 && (<BasicsStep form={formData} updateField={updateField}/>)}
-                {currentStep === 2 && (<BrandingStep form={formData} updateField={updateField}/>)}
-                {currentStep === 3 && (<ContactStep form={formData} updateField={updateField}/>)}
-                {currentStep === 4 && (<LocationStep form={formData} updateField={updateField}/>)}
-                {currentStep === 5 && (<URLstep form={formData} updateField={updateField}/>)}
-                {currentStep === 6 && (<PreviewStep form={formData} updateField={updateField}/>)}
+                {currentStep === 1 && (<BasicsStep form={formData} updateField={updateField} errors={errors}/>)}
+                {currentStep === 2 && (<BrandingStep form={formData} updateField={updateField} errors={errors}/>)}
+                {currentStep === 3 && (<ContactStep form={formData} updateField={updateField} errors={errors}/>)}
+                {currentStep === 4 && (<LocationStep form={formData} updateField={updateField} errors={errors}/>)}
+                {currentStep === 5 && (<URLstep form={formData} updateField={updateField} errors={errors}/>)}
+                {currentStep === 6 && (<PreviewStep form={formData} updateField={updateField} errors={errors}/>)}
 
                 <div className="wizard-navigation">
                     {currentStep > 1 && (<button 
                     onClick={goBackward}
-                    className="navigate-back">Back</button>)}
+                    className="navigate-back">
+                        <LuArrowLeft/>
+                        Back</button>)}
 
                     {currentStep < 6 ? 
                     (<button 
+                        className="navigate-forward"
                     onClick={goToNextStep}
-                    >Continue</button>)
+                    >Continue <LuArrowRight/></button>)
                     :
-                    (<button>Create Business</button>)
+                    (<button className="create-business-btn">Create Business <LuArrowRight/></button>)
                 }
                 </div>
             </div>
