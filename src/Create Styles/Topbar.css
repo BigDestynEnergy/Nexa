@@ -38,7 +38,7 @@
 
 .topbar-tab.active{
     color: #fff;
-    background: var(--nexa-accent-purple);
+    background: var(--nexa-primary);
 }
 
 .signout-menu{
