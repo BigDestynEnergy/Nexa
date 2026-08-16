@@ -1,0 +1,76 @@
+.home-topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 100;
+    padding: 14px;
+    box-shadow: var(--nexa-shadow-sm);
+    background: transparent;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.home-topbar .topbar-buttons{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-evenly;
+    max-width: 300px;
+}
+
+.topbar-tab{
+    text-decoration: none;
+    color: var(--nexa-black);
+    cursor: pointer;
+    transition: all .3s ease;
+    background: #fff;
+    padding: 6px;
+    display: flex;
+    border: 1px solid var(--nexa-border);
+    border-radius: var(--nexa-radius-lg);
+}
+
+.topbar-tab svg{
+    font-size: 16px;
+}
+
+.topbar-tab.active{
+    color: #fff;
+    background: var(--nexa-accent-purple);
+}
+
+.signout-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    background: var(--nexa-white);
+    top: 64px;
+    padding: 8px;
+    gap: 4px;
+    box-shadow: var(--nexa-shadow-md);
+    border-radius: var(--nexa-radius-md);
+    animation: slideDown .3s ease;
+}
+
+.signout-menu button{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+    font-weight: 400;
+    color: var(--nexa-accent-purple);
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.signout-menu button:hover{
+    color: var(--nexa-white);
+    background: var(--nexa-accent-purple);
+}
