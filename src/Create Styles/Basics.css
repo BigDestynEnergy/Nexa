@@ -1,10 +1,7 @@
-/* =========================
-   BASICS STEP
-========================= */
 
 .basics {
     max-width: 840px;
-    margin: 0 30px;
+    margin: 30px 30px;
 }
 
 .basics .form-group {
