@@ -16,6 +16,7 @@
     --nexa-text-muted: #707070;
     --nexa-text-inverse: #ffffff;
     --nexa-text-muted-xl:#a9a9a9;
+    --nexa-text-dull:#404040;
 
     
     --nexa-bg: #f8f8f5;
@@ -43,11 +44,12 @@
     --nexa-warning: #ff7600;
     --nexa-warning-hover: #f37404;
 
-    --nexa-danger: #c00010;
+    --nexa-danger: #dc2626;
 
     --nexa-success: #1db954;
 
     --nexa-accent: #615a80;
+    --nexa-accent-purple:#6c5ce7;
 
 
   

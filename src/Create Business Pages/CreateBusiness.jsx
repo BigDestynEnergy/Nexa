@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../Styles/Create.css";
 import { LuArrowLeft, LuArrowRight, LuSparkles } from "react-icons/lu";
 import Steps from "./Steps";
@@ -31,6 +31,9 @@ export default function CreateBusiness(){
     url: "",
     slug: ""
 });
+
+const nextRef = useRef();
+const backRef = useRef();
 
 const [currentStep, setCurrentStep] = useState(1);
 
@@ -89,6 +92,28 @@ const bioText = ()=>{
         setCurrentStep(prev => prev - 1)
     }
 
+    useEffect(()=>{
+       
+        const onKeyDown = (e) => {
+        if(e.key === "ArrowLeft"){
+            currentStep === 1 ?
+            null :
+            backRef.current?.click()
+    
+        }
+
+        if(e.key === "ArrowRight"){
+            nextRef.current?.click();
+            return;
+        }}
+
+        document.addEventListener("keydown", onKeyDown);
+
+        return () => {
+            document.removeEventListener("keydown", onkeydown);
+        }
+        
+    }, [])
     
 
     return(
@@ -99,7 +124,7 @@ const bioText = ()=>{
                 - <span>Create your business</span>
             </div>
 
-            <div classNamnpme="create-business-container">
+            <div className="create-business-container">
                 <div className="topbar-container">
                     <div className="top-layer">
                         <span className="stepsof">{`Step ${currentStep} of 6`}</span>
@@ -123,6 +148,7 @@ const bioText = ()=>{
                 <div className="wizard-navigation">
                     {currentStep > 1 && (<button 
                     onClick={goBackward}
+                    ref={backRef}
                     className="navigate-back">
                         <LuArrowLeft/>
                         Back</button>)}
@@ -131,6 +157,7 @@ const bioText = ()=>{
                     (<button 
                         className="navigate-forward"
                     onClick={goToNextStep}
+                    ref={nextRef}
                     >Continue <LuArrowRight/></button>)
                     :
                     (<button className="create-business-btn">Create Business <LuArrowRight/></button>)

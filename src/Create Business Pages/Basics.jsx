@@ -45,7 +45,7 @@ export default function BasicsStep({form, updateField, errors}){
             </div>
 
         <div className="form-group">
-                <label>Business Cateogory</label>
+                <label>Business Category</label>
 
                 <div className="categories">
                     {categories.map((cat, index) => (

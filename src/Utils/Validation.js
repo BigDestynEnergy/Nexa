@@ -26,11 +26,11 @@ export const validateStep = (step, data) => {
         
         case 3:
             if(data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)){
-                errors.email = "Phone number is required."
+                errors.email = "No special characters are allowed"
             }
 
             if(!data.phone.trim()){
-                errors.phone = "Create a unique URL."
+                errors.phone = "Phone number is required."
             }
 
             break;

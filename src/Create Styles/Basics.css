@@ -1,105 +1,266 @@
-.basics{
-    display: flex;
-    flex-direction: column;
+/* =========================
+   BASICS STEP
+========================= */
+
+.basics {
+    max-width: 840px;
+    margin: 0 30px;
 }
 
-.basics .form-group{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 6px 0;
-    gap: 4px;
+.basics .form-group {
+    margin-bottom: 26px;
 }
 
-.form-group input, .form-group textarea{
-    padding: 8px;
+.basics label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #202020;
+}
+
+
+/* =========================
+   BUSINESS NAME
+========================= */
+
+.basics input {
     width: 100%;
-    border: 2px solid var(--nexa-border);
-    background: transparent;
-    border-radius: var(--nexa-radius-xs);
-}
+    height: 48px;
+    padding: 0 13px;
 
-.form-group input:focus, .form-group textarea:focus{
-    border-color: var(--nexa-primary);
+    border: 1px solid #dedede;
+    border-radius: 10px;
+
     background: #fff;
-}
+    color: #222;
 
-.form-group textarea{min-height: 100px;}
-
-.error-message{
+    font-family: inherit;
     font-size: 14px;
-    color: #cf0000;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.basics .categories{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 4px;
+.basics input::placeholder,
+.basics textarea::placeholder {
+    color: #8a8a8a;
 }
 
-.categories .category{
-    color: var(--nexa-text-muted);
-    border: 1px solid var(--nexa-border);
-    padding: 10px;
-    background: transparent;
-    border-radius: var(--nexa-radius-lg);
-    cursor: pointer;
-    font-weight: 500;
-    width: 160px;
-    font-size: 12px;
-    transition: all .3s ease;
+.basics input:focus,
+.basics textarea:focus {
+    border-color: #999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
 }
 
-.category:hover{
-    transform: translateY(-1px);
-    color: var(--nexa-primary);
-    border-color: var(--nexa-primary);
-}
 
-.category.selected{
-    color: #fff;
-    background: var(--nexa-primary);
-}
+/* =========================
+   CATEGORIES
+========================= */
 
-.business-types{
-    display: grid;
-    gap: 12px; width: 60%;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-}
-
-.business-types .business-type{
-    border: 1px solid var(--nexa-border);
-    padding: 8px;
-    gap: 4px;cursor: pointer;
+.categories {
     display: flex;
-    flex-direction: column;
-    border-radius: var(--nexa-radius-md);
-    transition: all .3s ease;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 2px;
 }
 
-.business-type h4{
-    font-weight: 500;
-    color: #000;
-    font-size: 16px;
+.category {
+    border: 1px solid #dedede;
+    border-radius: 999px;
+
+    background: #fff;
+    color: #707070;
+
+    padding: 8px 14px;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.15s ease;
 }
 
-.business-type:hover{
-    transform: translateY(-2px);
-    border-color: var(--nexa-primary);
+.category:hover {
+    border-color: #bdbdbd;
+    color: #333;
 }
 
-.business-type span{
-    color: var(--nexa-text-muted);
-    font-size: 14px;
+.category:active {
+    transform: scale(0.97);
 }
 
-.business-type.selected{
-    background: var(--nexa-primary);
-    border-color: var(--nexa-primary);
-}
-
-.business-type.selected span, .business-type.selected h4{
+.category.selected {
+    background: #37885f;
+    border-color: #37885f;
     color: #fff;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.basics textarea {
+    width: 100%;
+    min-height: 98px;
+
+    padding: 13px;
+
+    resize: vertical;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dedede;
+    border-radius: 10px;
+
+    background: #fff;
+    color: #222;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+
+    outline: none;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.basics textarea:focus {
+    border-color: #999;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================
+   BUSINESS TYPE
+========================= */
+
+.business-types {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+
+    margin-top: 4px;
+}
+
+.business-type {
+    min-height: 74px;
+
+    padding: 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dedede;
+    border-radius: 12px;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.15s ease;
+}
+
+.business-type:hover {
+    border-color: #bdbdbd;
+    transform: translateY(-1px);
+}
+
+.business-type.selected {
+    border-color: #37885f;
+    background: #f4faf7;
+    box-shadow: 0 0 0 1px #37885f;
+}
+
+.business-type h4 {
+    margin: 0 0 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #222;
+}
+
+.business-type span {
+    display: block;
+
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================
+   ERRORS
+========================= */
+
+.error-message {
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    color: #d64545;
+}
+
+.input-error {
+    border-color: #d64545 !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .business-types {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .basics .form-group {
+        margin-bottom: 22px;
+    }
+
+    .category {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .business-type {
+        padding: 14px;
+    }
+
+    .basics textarea {
+        min-height: 110px;
+    }
 
 }
