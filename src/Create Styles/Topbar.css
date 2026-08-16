@@ -62,7 +62,7 @@
     gap: 4px;
     padding: 8px;
     font-weight: 400;
-    color: var(--nexa-accent-purple);
+    color: var(--nexa-primary);
     background: transparent;
     width: 100%;
     text-align: center;
@@ -72,5 +72,5 @@
 
 .signout-menu button:hover{
     color: var(--nexa-white);
-    background: var(--nexa-accent-purple);
+    background: var(--nexa-primary);
 }
