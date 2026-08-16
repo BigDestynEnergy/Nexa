@@ -7,7 +7,7 @@ export default function Steps({currentStep}){
         "Branding",
         "Contact",
         "Location",
-        "NEXA URL",
+        "URL",
         "Preview"
     ]
 

@@ -32,7 +32,7 @@ export default function CreateBusiness(){
     slug: ""
 });
 
-const [currentStep, setCurrentStep] = useState(6);
+const [currentStep, setCurrentStep] = useState(1);
 
 const [errors, setErrors] = useState({});
 

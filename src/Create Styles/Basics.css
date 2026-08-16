@@ -18,6 +18,10 @@
     border-radius: var(--nexa-radius-xs);
 }
 
+.form-group input:focus, .form-group textarea:focus{
+    border-color: var(--nexa-primary);
+}
+
 .form-group textarea{min-height: 100px;}
 
 .error-message{
@@ -28,8 +32,8 @@
 .basics .categories{
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 4px;
 }
 
 .categories .category{
@@ -37,15 +41,18 @@
     border: 1px solid var(--nexa-border);
     padding: 10px;
     background: transparent;
-    border-radius: var(--nexa-radius-xs);
+    border-radius: var(--nexa-radius-lg);
     cursor: pointer;
+    font-weight: 500;
+    width: 160px;
+    font-size: 12px;
     transition: all .3s ease;
 }
 
 .category:hover{
-    transform: translateY(-2px);
-    color: var(--nexa-text);
-    border-color: var(--nexa-text);
+    transform: translateY(-1px);
+    color: var(--nexa-primary);
+    border-color: var(--nexa-primary);
 }
 
 .category.selected{
@@ -65,13 +72,14 @@
     gap: 4px;cursor: pointer;
     display: flex;
     flex-direction: column;
-    border-radius: var(--nexa-radius-xs);
+    border-radius: var(--nexa-radius-md);
     transition: all .3s ease;
 }
 
 .business-type h4{
-    font-weight: 600;
+    font-weight: 500;
     color: #000;
+    font-size: 16px;
 }
 
 .business-type:hover{
@@ -81,6 +89,7 @@
 
 .business-type span{
     color: var(--nexa-text-muted);
+    font-size: 14px;
 }
 
 .business-type.selected{
