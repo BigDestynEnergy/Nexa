@@ -14,8 +14,8 @@
 
 .steps .step .icon-number{
     border: 1px solid var(--nexa-text-muted);
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
