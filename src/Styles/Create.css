@@ -12,6 +12,7 @@
     padding: 4px;
     font-size: 14px;
     display: flex;
+    margin-top:10px;
     align-items: center;
     gap: 4px;
 }
