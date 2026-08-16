@@ -6,6 +6,9 @@ import Homepage from "../Pages/Homepage";
 import NotFound from "../Components/NotFound";
 import CreateBusiness from "../Create Business Pages/CreateBusiness";
 import AppLayout from "./Layout"
+import Settings from "../Pages/Settings";
+import Profile from "../Pages/Profile";
+
 export default function ApplicationRouter(){
     return(
         <Routes>
@@ -16,6 +19,8 @@ export default function ApplicationRouter(){
             <Route element={<AppLayout/>}>
              <Route index element={<Homepage/>}/>
             <Route path="/create" element={<CreateBusiness/>}/>
+                 <Route path="settings" element={<Settings/>}/>
+            <Route path="profile" element={<Profile/>}/>
             </Route>
             <Route path="*" element={<NotFound/>}/>
         </Routes>
