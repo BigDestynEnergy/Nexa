@@ -15,11 +15,13 @@
     padding: 8px;
     width: 100%;
     border: 2px solid var(--nexa-border);
+    background: transparent;
     border-radius: var(--nexa-radius-xs);
 }
 
 .form-group input:focus, .form-group textarea:focus{
     border-color: var(--nexa-primary);
+    background: #fff;
 }
 
 .form-group textarea{min-height: 100px;}

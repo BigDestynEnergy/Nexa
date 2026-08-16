@@ -53,11 +53,11 @@ export default function BasicsStep({form, updateField, errors}){
                         onClick={()=>{addCategory(cat)}}
                         key={index}>{cat}</button>
                         ))}
+                </div>
 
-                        <span className="error-message">
+                 <span className="error-message">
                             {errors.category}
                         </span>
-                </div>
             </div>
 
                         <div className="form-group">
