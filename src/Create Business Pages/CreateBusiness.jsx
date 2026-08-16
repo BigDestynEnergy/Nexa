@@ -95,11 +95,11 @@ const bioText = ()=>{
         <main className="create">
             <div className="brand">
                 <LuSparkles/>
-                <span>Nexa </span>
+                <span>NEXA </span>
                 - <span>Create your business</span>
             </div>
 
-            <div className="create-business-container">
+            <div classNamnpme="create-business-container">
                 <div className="topbar-container">
                     <div className="top-layer">
                         <span className="stepsof">{`Step ${currentStep} of 6`}</span>
