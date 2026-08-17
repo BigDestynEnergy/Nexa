@@ -35,7 +35,7 @@ export default function CreateBusiness(){
 const nextRef = useRef();
 const backRef = useRef();
 
-const [currentStep, setCurrentStep] = useState(1);
+const [currentStep, setCurrentStep] = useState(2);
 
 const [errors, setErrors] = useState({});
 
@@ -110,7 +110,7 @@ const bioText = ()=>{
         document.addEventListener("keydown", onKeyDown);
 
         return () => {
-            document.removeEventListener("keydown", onkeydown);
+            document.removeEventListener("keydown", onKeyDown);
         }
         
     }, [])
