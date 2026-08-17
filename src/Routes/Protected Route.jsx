@@ -1,10 +1,17 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useSignedIn } from "../Z-Index/SignedIn"
+import { useAuth } from "../Contexts/Auth";
+
 
  const ProtectedRoute = () => {
-    const {allowed} = useSignedIn();
+    const {user, authLoading} = useAuth();
 
-    if(!allowed) return <Navigate to="/" replace/>
+    if(authLoading){
+        return <div>Loading...</div>
+    }
+    if(!user){
+        return <Navigate to="/signin" replace/>
+    }
+
     return <Outlet/>
 }
 

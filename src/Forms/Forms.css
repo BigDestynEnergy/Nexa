@@ -45,6 +45,18 @@
     padding: 8px;
 }
 
+.forms .eye{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.eye svg{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
 .input-group .top{
     width: 100%;
     display: flex;

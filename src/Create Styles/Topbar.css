@@ -5,9 +5,10 @@
     right: 0;
     display: flex;
     z-index: 100;
+
     padding: 14px;
     box-shadow: var(--nexa-shadow-sm);
-    background: transparent;
+    background: linear-gradient(to right, var(--nexa-surface), var(--nexa-surface-blue), var(--nexa-surface-muted));
     align-items: center;
     justify-content: flex-end;
 }
@@ -16,6 +17,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
     justify-content: space-evenly;
     max-width: 300px;
 }

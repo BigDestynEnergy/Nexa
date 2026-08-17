@@ -46,8 +46,10 @@
     font-weight: 500;
     background: var(--nexa-primary-light);
     padding: 4px;
+
     border-radius: 8px;
 }
+
 
 .top-layer .bio{
     font-size: 14px;

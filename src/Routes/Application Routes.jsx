@@ -9,13 +9,17 @@ import AppLayout from "./Layout"
 import Settings from "../Pages/Settings";
 import Profile from "../Pages/Profile";
 import ProtectedRoute from "./Protected Route";
+import PublicRoute from "./Public Route";
 
 export default function ApplicationRouter(){
     return(
         <Routes>
+            <Route element={<PublicRoute/>}>
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/" element={<LandingPage/>}/>
+            </Route>
+            
            <Route element={<ProtectedRoute/>}>
            <Route element={<AppLayout/>}>
              <Route path="/home" element={<Homepage/>}/>

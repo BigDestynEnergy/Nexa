@@ -2,18 +2,20 @@ import { BrowserRouter } from "react-router-dom"
 import ApplicationRouter from "../Routes/Application Routes"
 import { LoadingProvider } from "../Contexts/Loading Context"
 import { PopupProvider } from "../Contexts/Popup context"
-import { SignedInProvider } from "../Z-Index/SignedIn"
+import { AuthProvider } from "../Contexts/Auth"
 
 export default function EntryPoint(){
   return(
     <div className="app">
       <PopupProvider>
       <LoadingProvider>
-        <SignedInProvider>
+        <AuthProvider>
+      
       <BrowserRouter>
         <ApplicationRouter/>
       </BrowserRouter>
-      </SignedInProvider>
+ 
+      </AuthProvider>
       </LoadingProvider>
       </PopupProvider>
     </div>

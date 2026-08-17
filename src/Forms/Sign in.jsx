@@ -3,7 +3,8 @@ import "./Forms.css";
 import { useLoading } from "../Contexts/Loading Context";
 import { useNavigate } from "react-router-dom";
 import { usePopup } from "../Contexts/Popup context";
-import { useSignedIn } from "../Z-Index/SignedIn";
+import { supabase } from "../Z-Index/supabase";
+import { LuEye, LuEyeClosed } from "react-icons/lu";
 
 export default function Signin(){
     const [form,setForm] = useState({
@@ -11,7 +12,7 @@ export default function Signin(){
     })
     const [vp, setVp] = useState(false);
 
-    const {allowUser} = useSignedIn();
+
 
     const {startLoading } = useLoading();
     const {notify} = usePopup();
@@ -26,7 +27,7 @@ export default function Signin(){
         }))
     }
 
-    const submitForm = (e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
 
         if(!form.email){
@@ -46,14 +47,34 @@ export default function Signin(){
             return notify(1, "Please enter a valid password");
         }
 
-        startLoading(true);
-        setTimeout(() => {
-            setForm({email:"", password:""});
-            allowUser({email: form.email, id: Date.now()});
-            notify(2, `Welcome back ${form.email.split('@')[0]}`)
+        try{
+            startLoading(true);
+
+            const {data, error} = await supabase.auth.signInWithPassword({
+                email: form.email.trim(),
+                password: form.password
+            });
+
+            if(error){
+                console.log(`Sign in error`, error.message);
+                notify(1, `Invalid email or password.`);
+                return;
+            }
+
+            if(!data.user){
+                notify(1, `Couldnt sign in. Please try again`);
+                return;
+            }
+
+            notify(2, `Signed in successfully`);
+              navigate("/home");
+        } catch(error){
+             console.error("Unexpected sign in error", error);
+            notify(1, "Something went wrong. Please try again." );
+           
+        } finally{
             startLoading(false);
-            navigate("/home");
-        }, 3000);
+        }
 
     }
 
@@ -80,8 +101,11 @@ export default function Signin(){
                         <label>Password</label>
                         <span>Forgot password?</span>
                     </div>
-                    <input type={vp ? 'text' : 'password'} value={form.password}
+                   <div className="eye">
+                     <input type={vp ? 'text' : 'password'} value={form.password}
                     name="password" onChange={collectInputs} placeholder={vp ? 'XXXX-XXXX' : '****-****'} />
+                {vp ? <LuEye onClick={()=>setVp(false)}/> : <LuEyeClosed onClick={()=>setVp(true)}/>}
+                   </div>
                 </div>
 
                 <button type="submit">Sign in</button>

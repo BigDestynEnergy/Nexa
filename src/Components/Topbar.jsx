@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { LuArrowRight, LuHouse, LuLogOut, LuPlus, LuSettings2, LuUser } from "react-icons/lu";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../Create Styles/Topbar.css";
-import { useSignedIn } from "../Z-Index/SignedIn";
+
 import { useLoading } from "../Contexts/Loading Context";
+import { useAuth } from "../Contexts/Auth";
 export default function Topbar(){
     const [isSigningOut, setIsSigningOut] = useState(false);
 
@@ -16,8 +17,8 @@ export default function Topbar(){
     const outsideClickRef = useRef();
 
     const navigate = useNavigate();
-    const {removeUser} = useSignedIn();
     const {startLoading} = useLoading();
+    const {signOut} = useAuth();
 
 
     const signoutButtons = [
@@ -49,7 +50,7 @@ export default function Topbar(){
                 startLoading(true);
                 setIsSigningOut(false);
                 setTimeout(()=>{
-                    removeUser();
+                    signOut();
                     startLoading(false);
                 }, 1600)
         }
