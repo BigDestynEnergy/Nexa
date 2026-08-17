@@ -43,6 +43,6 @@
     }
 
     .step .name{
-        display: none;
+        font-size: clamp(10px, 10px, 16px);
     }
 }

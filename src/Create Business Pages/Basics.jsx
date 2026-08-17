@@ -24,7 +24,7 @@ export default function BasicsStep({form, updateField, errors}){
         {type: "Both", slug:"Storefront & Online"},
     ]
     return(
-        <main className="basics step">
+        <main className="basics">
             <h2>Business basics</h2>
             <p>The essentials customers see first on your NEXA Page.</p>
 

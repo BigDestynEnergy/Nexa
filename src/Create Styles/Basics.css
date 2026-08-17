@@ -21,46 +21,26 @@
    BUSINESS NAME
 ========================= */
 
-.basics input {
-    width: 100%;
-    height: 48px;
-    padding: 0 13px;
-
-    border: 1px solid #dedede;
-    border-radius: 10px;
-
-    background: #fff;
-    color: #222;
-
-    font-family: inherit;
-    font-size: 14px;
-
-    outline: none;
-
-    box-sizing: border-box;
-
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+.basics input, .basics textarea {
+ padding: 10px;
+ box-sizing: border-box;
+ border: 1px solid var(--nexa-primary);
+ border-radius: var(--nexa-radius-sm);
+ font-size: clamp(10px, 12px, 14px); 
+ outline: none;
+ width: 100%;
 }
 
 .basics input::placeholder,
 .basics textarea::placeholder {
-    color: #8a8a8a;
+    color: var(--nexa-text-muted);
 }
 
 .basics input:focus,
 .basics textarea:focus {
-    border-color: #999;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+    border-color: var(--nexa-primary);
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
 }
-
-
-/* =========================
-   CATEGORIES
-========================= */
 
 .categories {
     display: flex;
@@ -107,49 +87,17 @@
     color: #fff;
 }
 
-
-/* =========================
-   DESCRIPTION
-========================= */
-
 .basics textarea {
-    width: 100%;
     min-height: 98px;
-
     padding: 13px;
-
     resize: vertical;
-
-    box-sizing: border-box;
-
-    border: 1px solid #dedede;
-    border-radius: 10px;
-
-    background: #fff;
-    color: #222;
-
-    font-family: inherit;
-    font-size: 14px;
     line-height: 1.5;
-
-    outline: none;
-
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
 }
 
 .basics textarea:focus {
-    border-color: #999;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
 }
 
-
-/* =========================
-   BUSINESS TYPE
-========================= */
 
 .business-types {
     display: grid;
@@ -161,23 +109,13 @@
 
 .business-type {
     min-height: 74px;
-
     padding: 16px;
-
     box-sizing: border-box;
-
     border: 1px solid #dedede;
     border-radius: 12px;
-
     background: #fff;
-
     cursor: pointer;
-
-    transition:
-        border-color 0.18s ease,
-        background 0.18s ease,
-        box-shadow 0.18s ease,
-        transform 0.15s ease;
+    transition: all .3s ease;
 }
 
 .business-type:hover {
@@ -207,10 +145,12 @@
     color: #777;
 }
 
+.basics p{
+    color: var(--nexa-text-muted);
+    font-size: 14px;
+}
 
-/* =========================
-   ERRORS
-========================= */
+
 
 .error-message {
     display: block;
@@ -228,10 +168,6 @@
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 700px) {
 
     .business-types {
@@ -241,7 +177,7 @@
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 568px) {
 
     .basics .form-group {
         margin-bottom: 22px;
@@ -254,10 +190,17 @@
 
     .business-type {
         padding: 14px;
+        min-height: 50px;
+    }
+
+    .business-type h4{
+        font-size: 0.8em;
     }
 
     .basics textarea {
-        min-height: 110px;
+        min-height: 90px;
     }
+
+    
 
 }
