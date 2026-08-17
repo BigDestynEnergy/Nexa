@@ -41,36 +41,57 @@
     background: var(--nexa-primary);
 }
 
-.signout-menu{
+.signout-overlay{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    right: 10px;
-    background: var(--nexa-white);
-    top: 64px;
+    justify-content: center;
     padding: 8px;
-    gap: 4px;
-    box-shadow: var(--nexa-shadow-md);
+}
+
+.signout-overlay .signout-menu{
+    background: #fff;
+    position: relative;
+    box-shadow: var(--nexa-shadow-sm);
+    width: 250px;
     border-radius: var(--nexa-radius-md);
-    animation: slideDown .3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 24px;
+    gap: 12px;
+    align-items: center;
+    animation: slideUp .3s ease forwards;
+}
+.signout-menu .line{
+    padding: 2px;
+    width: 30px;
+    background: var(--nexa-black);
+    border-radius: var(--nexa-radius-md);
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
 }
 
 .signout-menu button{
+    padding: 8px;
+    width: 100%;
+    font-family: Manrope;
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 8px;
-    font-weight: 400;
-    color: var(--nexa-primary);
-    background: transparent;
-    width: 100%;
-    text-align: center;
     justify-content: center;
-    border-radius: 8px;
+    gap: 4px;
+    background: transparent;
+    border: 1px solid var(--nexa-primary);
+    color: var(--nexa-primary);
+    border-radius: var(--nexa-radius-lg);
 }
 
 .signout-menu button:hover{
-    color: var(--nexa-white);
     background: var(--nexa-primary);
+    color: var(--nexa-white);
 }

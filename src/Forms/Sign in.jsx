@@ -3,12 +3,15 @@ import "./Forms.css";
 import { useLoading } from "../Contexts/Loading Context";
 import { useNavigate } from "react-router-dom";
 import { usePopup } from "../Contexts/Popup context";
+import { useSignedIn } from "../Z-Index/SignedIn";
 
 export default function Signin(){
     const [form,setForm] = useState({
         email:"", password:""
     })
     const [vp, setVp] = useState(false);
+
+    const {allowUser} = useSignedIn();
 
     const {startLoading } = useLoading();
     const {notify} = usePopup();
@@ -46,6 +49,7 @@ export default function Signin(){
         startLoading(true);
         setTimeout(() => {
             setForm({email:"", password:""});
+            allowUser({email: form.email, id: Date.now()});
             notify(2, `Welcome back ${form.email.split('@')[0]}`)
             startLoading(false);
             navigate("/home");

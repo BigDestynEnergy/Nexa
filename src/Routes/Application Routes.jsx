@@ -8,6 +8,7 @@ import CreateBusiness from "../Create Business Pages/CreateBusiness";
 import AppLayout from "./Layout"
 import Settings from "../Pages/Settings";
 import Profile from "../Pages/Profile";
+import ProtectedRoute from "./Protected Route";
 
 export default function ApplicationRouter(){
     return(
@@ -15,13 +16,15 @@ export default function ApplicationRouter(){
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/" element={<LandingPage/>}/>
-           
-            <Route element={<AppLayout/>}>
-             <Route index element={<Homepage/>}/>
+           <Route element={<ProtectedRoute/>}>
+           <Route element={<AppLayout/>}>
+             <Route path="/home" element={<Homepage/>}/>
             <Route path="/create" element={<CreateBusiness/>}/>
                  <Route path="settings" element={<Settings/>}/>
             <Route path="profile" element={<Profile/>}/>
             </Route>
+            </Route>
+
             <Route path="*" element={<NotFound/>}/>
         </Routes>
     )
