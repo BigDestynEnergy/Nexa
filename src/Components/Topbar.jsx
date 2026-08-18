@@ -21,7 +21,7 @@ export default function Topbar(){
 
 
     const signoutButtons = [
-        {name: "Add existing account", icon: LuPlus, id:1},
+        {name: "Switch account", icon: LuPlus, id:1},
         {name: "Sign out", icon: LuArrowRight, id: 2}
     ]
 
@@ -43,7 +43,8 @@ export default function Topbar(){
     const signOutControls = (idx) => {
         switch(idx){
             case 1:
-                alert("Still under development.");
+                navigate("/accounts");
+                setIsSigningOut(false);
                 break;
             case 2:
                 startLoading(true);

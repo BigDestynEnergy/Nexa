@@ -1,0 +1,736 @@
+/* ================================
+   BUSINESS PAGE
+================================ */
+
+.business-page {
+    min-height: 100vh;
+    background: #f7f8f7;
+    color: #202220;
+}
+
+
+/* ================================
+   HERO / COVER
+================================ */
+
+.business-hero {
+    position: relative;
+
+    width: 100%;
+    height: 320px;
+
+    overflow: hidden;
+
+    background: #e9eee9;
+}
+
+.business-cover-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.business-cover-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #dfece3,
+            #eef2ef 45%,
+            #dce5df
+        );
+
+    color: #37885f;
+}
+
+.business-cover-placeholder svg {
+    width: 38px;
+    height: 38px;
+}
+
+.business-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.25),
+        transparent 45%,
+        rgba(0, 0, 0, 0.08)
+    );
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   HERO CONTROLS
+================================ */
+
+.business-hero-top {
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+    right: 50%;
+
+    width: min(1100px, calc(100% - 40px));
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.business-back,
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    height: 38px;
+
+    padding: 0 13px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    color: #292c29;
+
+    backdrop-filter: blur(10px);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.business-back:hover,
+.share-button:hover {
+    background: #fff;
+    transform: translateY(-1px);
+}
+
+.business-back svg,
+.share-button svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.business-container {
+    width: min(1100px, calc(100% - 40px));
+
+    margin: 0 auto;
+}
+
+
+/* ================================
+   PROFILE HEADER
+================================ */
+
+.business-profile-header {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 20px;
+
+    margin-top: -62px;
+
+    z-index: 2;
+}
+
+.business-logo {
+    width: 124px;
+    height: 124px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: 6px solid #fff;
+    border-radius: 24px;
+
+    background: #eaf5ee;
+
+    color: #37885f;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.business-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.business-logo span {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   BUSINESS HEADING
+================================ */
+
+.business-heading {
+    padding-bottom: 7px;
+}
+
+.business-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.business-name-row h1 {
+    margin: 0;
+
+    color: #171917;
+
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+}
+
+.verified-badge {
+    width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #37885f;
+    color: #fff;
+}
+
+.verified-badge svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 3;
+}
+
+.business-category-full {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #6f756f;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.business-location-full {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 9px;
+
+    color: #777d78;
+
+    font-size: 12px;
+}
+
+.business-location-full svg {
+    width: 14px;
+    height: 14px;
+
+    color: #37885f;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.business-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #e4e7e4;
+}
+
+.business-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    border: 1px solid #dfe4df;
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #343734;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.business-action:hover {
+    border-color: #37885f;
+
+    color: #37885f;
+
+    transform: translateY(-1px);
+}
+
+.business-action.primary {
+    border-color: #37885f;
+
+    background: #37885f;
+
+    color: #fff;
+}
+
+.business-action.primary:hover {
+    background: #2f7652;
+
+    color: #fff;
+}
+
+.business-action svg {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.business-content {
+    width: min(720px, 100%);
+
+    padding: 38px 0 10px;
+}
+
+.business-section {
+    padding-bottom: 36px;
+}
+
+.section-heading {
+    margin-bottom: 15px;
+
+    color: #222522;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.business-description {
+    margin: 0;
+
+    color: #666c67;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    white-space: pre-line;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.business-details {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 14px;
+
+    border: 1px solid #e2e6e2;
+    border-radius: 12px;
+
+    background: #fff;
+}
+
+.detail-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #edf6f0;
+
+    color: #37885f;
+}
+
+.detail-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.detail-item > div:last-child,
+.contact-item > div:nth-child(2) {
+    min-width: 0;
+}
+
+.detail-item small,
+.contact-item small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8a908b;
+
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.detail-item strong,
+.contact-item strong {
+    display: block;
+
+    color: #333633;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 12px;
+
+    border: 1px solid #e2e6e2;
+    border-radius: 12px;
+
+    background: #fff;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.contact-item:hover {
+    border-color: #c4d8cb;
+
+    transform: translateX(2px);
+}
+
+.contact-item > div:nth-child(2) {
+    flex: 1;
+}
+
+.contact-item > svg {
+    width: 15px;
+    height: 15px;
+
+    color: #858a86;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.business-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px 0 35px;
+
+    border-top: 1px solid #e4e7e4;
+
+    color: #8a908b;
+
+    font-size: 11px;
+}
+
+.nexa-mark {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #555a56;
+
+    font-weight: 700;
+}
+
+.nexa-mark svg {
+    width: 14px;
+    height: 14px;
+
+    color: #37885f;
+}
+
+
+/* ================================
+   LOADING / ERROR
+================================ */
+
+.business-state {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.state-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 14px;
+
+    background: #eaf5ee;
+
+    color: #37885f;
+}
+
+.state-icon.error {
+    background: #f8eeee;
+    color: #c84d4d;
+}
+
+.state-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.business-state h1,
+.business-state h2 {
+    margin: 0 0 7px;
+
+    color: #222522;
+
+    font-size: 22px;
+}
+
+.business-state p {
+    margin: 0;
+
+    color: #7b817c;
+
+    font-size: 13px;
+}
+
+.state-button {
+    display: inline-flex;
+
+    margin-top: 20px;
+    padding: 11px 15px;
+
+    border-radius: 9px;
+
+    background: #37885f;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+    .business-hero {
+        height: 240px;
+    }
+
+    .business-container {
+        width: min(100% - 28px, 1100px);
+    }
+
+    .business-hero-top {
+        width: calc(100% - 28px);
+    }
+
+    .business-profile-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        margin-top: -55px;
+
+        gap: 12px;
+    }
+
+    .business-logo {
+        width: 105px;
+        height: 105px;
+
+        border-radius: 20px;
+    }
+
+    .business-logo span {
+        font-size: 34px;
+    }
+
+    .business-heading {
+        padding-bottom: 0;
+    }
+
+    .business-actions {
+        padding: 20px 0;
+    }
+
+    .business-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .business-hero {
+        height: 210px;
+    }
+
+    .business-back span {
+        display: none;
+    }
+
+    .business-back,
+    .share-button {
+        height: 35px;
+        padding: 0 10px;
+    }
+
+    .business-name-row h1 {
+        font-size: 27px;
+    }
+
+    .business-actions {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-action {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .business-content {
+        padding-top: 30px;
+    }
+
+    .business-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}

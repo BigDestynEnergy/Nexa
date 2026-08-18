@@ -1,50 +1,223 @@
-.business-card-home{
+/* =========================
+   BUSINESS CARD
+========================= */
+
+.business-card-home {
+    position: relative;
+
+    width: 100%;
+    min-height: 110px;
+
     display: flex;
-    padding: 12px;
     align-items: center;
-    gap: 6px;
+    gap: 14px;
+
+    padding: 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e3e6e3;
+    border-radius: 15px;
+
     background: #fff;
-    border-radius: var(--nexa-radius-md);
-    box-shadow: var(--nexa-shadow-sm);
-    margin-top: 8px;
-    border: 1px solid transparent;
+    color: #222;
+
+    font-family: inherit;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
 }
 
-.business-card-home:hover{
-    transform: scale(0.99);
+.business-card-home:hover {
+    border-color: #c7d9ce;
+
+    background: #fcfefd;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.business-card-home img{
+.business-card-home:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.business-card-logo {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 13px;
+    background: #eef6f1;
+    color: var(--nexa-primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.business-card-logo img {
     height: 70px;
-    border-radius: var(--nexa-radius-sm);
+    display: block;
+    object-fit: cover;
 }
 
-.business-card-home-info{
+.business-card-home:hover .business-card-logo img{
+    transform: scale(0.8);
+    transition: transform .3s ease;
+}
+
+.business-card-home-info {
+    min-width: 0;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 6px;
-    gap: 4px;
+
+    gap: 3px;
 }
 
-.business-card-home-info span{
-    padding: 2px;
+.business-card-home-info h3 {
+    width: 100%;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    font-size: 15px;
+    font-weight: 650;
+
+    color: #202220;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.business-card-home-arrow{
-    padding: 16px;
-    background: transparent;
-    border: 1px solid transparent;
-    display: flex;
-    cursor: pointer;
+.business-card-home-info > span {
+    display: block;
+
+    max-width: 100%;
+
+    overflow: hidden;
+
+    color: var(--nexa-text-muted);
+
+    font-size: 12px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.business-location {
+    display: inline-flex !important;
     align-items: center;
-    border-radius: var(--nexa-radius-sm);
+
+    gap: 4px;
+
+    color: var(--nexa-text-muted) !important;
 }
 
-.business-card-home:hover .business-card-home-arrow{
-    border-color: var(--nexa-primary);
+.business-location svg {
+    flex-shrink: 0;
+
+    width: 12px;
+    height: 12px;
 }
 
-.business-card-home-arrow:hover{
+
+
+.business-card-home-arrow {
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--nexa-text-muted);
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: var(--nexa-text-muted);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.business-card-home-arrow svg {
+    width: 15px;
+    height: 15px;
+}
+
+.business-card-home:hover .business-card-home-arrow {
+    background: var(--nexa-primary);
     border-color: var(--nexa-primary);
+    color: #fff;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================
+   FOCUS
+========================= */
+
+.business-card-home:focus-visible {
+    outline: 3px solid rgba(55, 136, 95, 0.2);
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 992px) {
+
+    .business-card-home {
+        min-height: 96px;
+
+        padding: 13px;
+
+        gap: 12px;
+    }
+
+    .business-card-logo {
+        flex-basis: 46px;
+
+        width: 46px;
+        height: 46px;
+
+        border-radius: 11px;
+
+        font-size: 18px;
+    }
+
+    .business-card-home-info h3 {
+        font-size: 14px;
+    }
+
+    .business-card-home-info > span {
+        font-size: 11px;
+    }
+
+    .business-card-home-arrow {
+        flex-basis: 29px;
+
+        width: 29px;
+        height: 29px;
+
+        border-radius: 8px;
+    }
+
 }
