@@ -12,6 +12,7 @@ import PreviewStep from "./Preview";
 import {usePopup} from "../Contexts/Popup context"
 import { validateStep } from "../Utils/Validation";
 import ProgressBar from "./Progress Bar";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateBusiness(){
 
@@ -30,11 +31,35 @@ export default function CreateBusiness(){
     city: "",
     maps:"",
     country: "Malawi",
-    slug: ""
+    slug: "",
+    brandColor: ""
 });
+
+const clearForm = () => {
+    setFormData({
+        name: "",
+    category: "",
+    description: "",
+    businessType: "",
+    logo: null,
+    cover: null,
+    phone: "",
+    whatsapp: "",
+    email: "",
+    website: "",
+    address: "",
+    city: "",
+    maps:"",
+    country: "Malawi",
+    slug: "",
+    brandColor: ""
+    })
+}
 
 const nextRef = useRef();
 const backRef = useRef();
+
+const navigate =useNavigate();
 
 const [currentStep, setCurrentStep] = useState(1);
 
@@ -241,59 +266,34 @@ console.log("Upload path:", fileName);
         const { data, error } = await supabase
             .from("businesses")
             .insert({
-                user_id: user.id,
+    user_id: user.id,
+    name: formData.name,
+    category: formData.category,
+    description: formData.description,
+    business_type: formData.businessType,
 
-                name: formData.name.trim(),
+    brand_color: formData.brandColor,
 
-                category: formData.category,
+    phone: formData.phone,
+    whatsapp: formData.whatsapp,
+    email: formData.email,
+    website: formData.website,
 
-                description:
-                    formData.description.trim(),
+    address: formData.address,
+    city: formData.city,
+    country: formData.country,
 
-                business_type:
-                    formData.businessType,
-
-                logo_url: logoUrl,
-
-                cover_url: coverUrl,
-
-                phone:
-                    formData.phone.trim(),
-
-                whatsapp:
-                    formData.whatsapp.trim(),
-
-                email:
-                    formData.email.trim(),
-
-                website:
-                    formData.website.trim(),
-
-                address:
-                    formData.address.trim(),
-
-                city:
-                    formData.city.trim(),
-
-                maps:
-                    formData.maps.trim(),
-
-                country:
-                    formData.country,
-
-                slug:
-                    formData.slug.trim()
-            })
+    slug: formData.slug
+})
             .select()
             .single();
 
 
         if (error) {
 
-            console.error(
-                "Business creation error:",
-                error
-            );
+           console.error("Business creation error:", {
+    message: error.message,
+});
 
             notify(
                 1,
@@ -306,7 +306,6 @@ console.log("Upload path:", fileName);
 
         console.log(
             "Business created:",
-            data
         );
 
 
@@ -314,6 +313,9 @@ console.log("Upload path:", fileName);
             2,
             "Your business has been created!"
         );
+        clearForm();
+        navigate(`/home`)
+
     } catch (error) {
 
         console.error(

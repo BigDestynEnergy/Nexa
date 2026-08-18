@@ -276,3 +276,210 @@
         min-height: 200px;
     }
 }
+
+/* =========================
+   BRAND COLORS
+========================= */
+
+.brand-colors {
+    margin-top: 35px;
+    padding-top: 30px;
+
+    border-top: 1px solid #e5e8e5;
+}
+
+.color-picker-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 18px;
+}
+
+.color-variations {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.color-option,
+.custom-color {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 1px #dfe3df;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.color-option:hover,
+.custom-color:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 0 2px #c8cec9;
+}
+
+.color-option.selected,
+.custom-color.selected {
+    box-shadow:
+        0 0 0 2px #222,
+        0 0 0 4px #fff;
+}
+
+.color-option svg,
+.custom-color svg {
+    width: 17px;
+    height: 17px;
+
+    color: white;
+
+    stroke-width: 3;
+    
+    filter:
+        drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+
+/* =========================
+   CUSTOM COLOR
+========================= */
+
+.custom-color {
+    overflow: hidden;
+
+    background:
+        conic-gradient(
+            #f00,
+            #ff0,
+            #0f0,
+            #0ff,
+            #00f,
+            #f0f,
+            #f00
+        );
+}
+
+.custom-color input {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   SELECTED COLOR
+========================= */
+
+.selected-color {
+    min-width: 170px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #e2e6e2;
+    border-radius: 10px;
+
+    background: #fff;
+}
+
+.selected-color-preview {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.selected-color span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #858b86;
+
+    font-size: 10px;
+}
+
+.selected-color strong {
+    color: #292d29;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .color-picker-area {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .color-variations {
+        width: 100%;
+    }
+
+    .selected-color {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .color-option,
+    .custom-color {
+        width: 38px;
+        height: 38px;
+    }
+
+    .color-variations {
+        gap: 9px;
+    }
+}

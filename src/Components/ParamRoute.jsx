@@ -274,6 +274,7 @@ export default function BusinessPage() {
                     {business.phone && (
                         <a
                             href={`tel:${business.phone}`}
+                            style={{background: `${business.brand_color}`, borderColor: `${business.brand_color}`}}
                             className="business-action primary"
                         >
                             <LuPhone />

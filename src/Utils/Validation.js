@@ -22,6 +22,9 @@ export const validateStep = (step, data) => {
             break;
 
         case 2:
+            if(!data.brandColor){
+                errors.brandColor = "Please select brand colors."
+            }
             break;
         
         case 3:

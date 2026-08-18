@@ -4,9 +4,11 @@ import { supabase } from "../Z-Index/supabase";
 import { LuArrowRight, LuPlus, LuSparkles } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import BusinessCard from "../Components/Business Card";
-
+import {usePopup} from "../Contexts/Popup context"
 export default function Homepage(){
     const nav = useNavigate();
+
+    const {notify} = usePopup();
 
     const [businessData, setBusinessData] = useState(null);
 
@@ -38,6 +40,38 @@ export default function Homepage(){
     fetchBusiness();
 }, [])
 
+const [deletingId, setDeletingId] = useState(null);
+
+const deleteBusiness = async (businessId) => {
+
+    const confirmed = window.confirm(
+        "Are you sure you want to delete this business? This action cannot be undone."
+    );
+
+    if (!confirmed) return;
+
+    setDeletingId(businessId);
+
+    const { error } = await supabase
+        .from("businesses")
+        .delete()
+        .eq("id", businessId);
+        notify(2, `Business deleted.`)
+
+    if (error) {
+        console.error("Business deletion error:", error);
+        setDeletingId(null);
+        return;
+    }
+
+    // Remove it immediately from the UI
+    setBusinessData((prev) =>
+        prev.filter((business) => business.id !== businessId)
+    );
+
+    setDeletingId(null);
+};
+
     return(
         <section className="home page">
            
@@ -66,7 +100,12 @@ export default function Homepage(){
 
    <div className="business-grid">
      {businessData ? (
-        businessData.map((business) => (<BusinessCard key={business.id} business={business} />))
+        businessData.map((business) => (
+        <BusinessCard
+          key={business.id}
+        business={business}
+        onDelete={deleteBusiness}
+        deleting={deletingId === business.id}/>))
     ) : (
         <span>
             Nothing here yet. Your business profile will show up here.

@@ -1,223 +1,191 @@
-/* =========================
-   BUSINESS CARD
-========================= */
-
 .business-card-home {
     position: relative;
 
-    width: 100%;
-    min-height: 110px;
-
     display: flex;
-    align-items: center;
-    gap: 14px;
+    flex-direction: column;
 
-    padding: 16px;
+    overflow: hidden;
 
-    box-sizing: border-box;
-
-    border: 1px solid #e3e6e3;
-    border-radius: 15px;
+    border: 1px solid #e2e6e2;
+    border-radius: 14px;
 
     background: #fff;
-    color: #222;
 
-    font-family: inherit;
-    text-align: left;
-
-    cursor: pointer;
-
-    transition: all .3s ease;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .business-card-home:hover {
-    border-color: #c7d9ce;
+    border-color: #cbd8ce;
 
-    background: #fcfefd;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
-.business-card-home:active {
-    transform: translateY(0) scale(0.99);
+
+/* Main clickable area */
+
+.business-card-main {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    border: 0;
+
+    background: transparent;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    cursor: pointer;
 }
+
+
+/* Logo */
 
 .business-card-logo {
-    width: 72px;
-    height: 72px;
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     overflow: hidden;
-    border-radius: 13px;
-    background: #eef6f1;
-    color: var(--nexa-primary);
-    font-size: 20px;
+
+    border-radius: 11px;
+
+    background: #eaf5ee;
+
+    color: #37885f;
+
     font-weight: 700;
+    font-size: 18px;
 }
 
 .business-card-logo img {
-    height: 70px;
-    display: block;
+    width: 100%;
+    height: 100%;
+
     object-fit: cover;
 }
 
-.business-card-home:hover .business-card-logo img{
-    transform: scale(0.8);
-    transition: transform .3s ease;
-}
+
+/* Info */
 
 .business-card-home-info {
     min-width: 0;
+
     flex: 1;
+
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 
     gap: 3px;
 }
 
 .business-card-home-info h3 {
-    width: 100%;
-
     margin: 0;
 
     overflow: hidden;
 
-    font-size: 15px;
-    font-weight: 650;
+    color: #222522;
 
-    color: #202220;
+    font-size: 14px;
 
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .business-card-home-info > span {
-    display: block;
+    color: #7b827c;
 
-    max-width: 100%;
-
-    overflow: hidden;
-
-    color: var(--nexa-text-muted);
-
-    font-size: 12px;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    font-size: 11px;
 }
 
-
 .business-location {
-    display: inline-flex !important;
+    display: flex;
+
     align-items: center;
 
     gap: 4px;
-
-    color: var(--nexa-text-muted) !important;
 }
 
 .business-location svg {
-    flex-shrink: 0;
-
     width: 12px;
     height: 12px;
+
+    color: #37885f;
 }
 
 
+/* Arrow */
 
 .business-card-home-arrow {
-    flex: 0 0 32px;
+    display: flex;
+    align-items: center;
 
-    width: 32px;
-    height: 32px;
+    color: #929892;
+}
+
+.business-card-home-arrow svg {
+    width: 17px;
+}
+
+
+/* Delete */
+
+.business-delete-button {
+    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--nexa-text-muted);
-    border-radius: 9px;
+    gap: 6px;
+
+    padding: 9px;
+
+    border: 0;
+    border-top: 1px solid #edf0ed;
 
     background: #fff;
 
-    color: var(--nexa-text-muted);
+    color: #a05b5b;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
 
     transition:
         background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+        color 0.2s ease;
 }
 
-.business-card-home-arrow svg {
-    width: 15px;
-    height: 15px;
+.business-delete-button:hover {
+    background: #fff5f5;
+
+    color: #c33f3f;
 }
 
-.business-card-home:hover .business-card-home-arrow {
-    background: var(--nexa-primary);
-    border-color: var(--nexa-primary);
-    color: #fff;
+.business-delete-button:disabled {
+    opacity: 0.5;
 
-    transform: translateX(2px);
+    cursor: not-allowed;
 }
 
-
-/* =========================
-   FOCUS
-========================= */
-
-.business-card-home:focus-visible {
-    outline: 3px solid rgba(55, 136, 95, 0.2);
-    outline-offset: 3px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 992px) {
-
-    .business-card-home {
-        min-height: 96px;
-
-        padding: 13px;
-
-        gap: 12px;
-    }
-
-    .business-card-logo {
-        flex-basis: 46px;
-
-        width: 46px;
-        height: 46px;
-
-        border-radius: 11px;
-
-        font-size: 18px;
-    }
-
-    .business-card-home-info h3 {
-        font-size: 14px;
-    }
-
-    .business-card-home-info > span {
-        font-size: 11px;
-    }
-
-    .business-card-home-arrow {
-        flex-basis: 29px;
-
-        width: 29px;
-        height: 29px;
-
-        border-radius: 8px;
-    }
-
+.business-delete-button svg {
+    width: 14px;
+    height: 14px;
 }
