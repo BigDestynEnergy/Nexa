@@ -71,7 +71,7 @@
     top: 0;
     bottom: 0;
     border-radius: var(--nexa-radius-md);
-    background: linear-gradient(to right, var(--nexa-primary-dark), var(--nexa-primary));
+    background: linear-gradient(to right, var(--nexa-accent-purple),var(--nexa-primary-dark), var(--nexa-primary));
     padding: 4px;
     transition: all .3s ease;
 }

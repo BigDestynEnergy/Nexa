@@ -1,3 +1,4 @@
 .page{
   margin-top:78px;
+  animation: slideDown .3s ease forwards;
 }

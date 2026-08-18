@@ -7,7 +7,6 @@ import NotFound from "../Components/NotFound";
 import CreateBusiness from "../Create Business Pages/CreateBusiness";
 import AppLayout from "./Layout"
 import Settings from "../Pages/Settings";
-import Profile from "../Pages/Profile";
 import ProtectedRoute from "./Protected Route";
 import PublicRoute from "./Public Route";
 import BusinessPage from "../Components/ParamRoute";
@@ -26,7 +25,7 @@ export default function ApplicationRouter(){
              <Route path="/home" element={<Homepage/>}/>
             <Route path="/create" element={<CreateBusiness/>}/>
             <Route path="settings" element={<Settings/>}/>
-            <Route path="profile" element={<Profile/>}/>
+            
             </Route>
             <Route path="/nexa/:id" element={<BusinessPage/>}/>
             </Route>

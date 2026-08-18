@@ -32,12 +32,12 @@ export default function BasicsStep({ form, updateField, errors }) {
     ];
 
     return (
-        <main className="basics step">
+        <main className="basics">
 
             {/* HEADER */}
             <div className="basics-heading">
                
-                <h1>Business basics</h1>
+                <h2>Business basics</h2>
 
                 <p>
                     Tell us about your business. These are the essentials

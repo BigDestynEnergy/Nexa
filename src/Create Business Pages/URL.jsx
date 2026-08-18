@@ -3,7 +3,7 @@ import "../Create Styles/URL.css";
 
 export default function URLstep({ form, errors, updateField }) {
     return (
-        <main className="url step">
+        <main className="url">
 
             <div className="url-heading">
                 <h1>NEXA URL</h1>
@@ -17,7 +17,7 @@ export default function URLstep({ form, errors, updateField }) {
 
             <div className="url-card">
 
-                <div className="form-group">
+                <div className="url-group">
 
                     <label htmlFor="nexa-url">
                         Your NEXA address
@@ -33,6 +33,7 @@ export default function URLstep({ form, errors, updateField }) {
                             id="nexa-url"
                             type="text"
                             value={form.slug}
+               
                             onChange={(e) =>
                                 updateField(
                                     "slug",

@@ -8,8 +8,10 @@ export default function ContactStep({errors, form, updateField}){
             <p>How customers get in touch from your NEXA page</p>
 
             <div className="form-group">
-                <label>Phone number</label>
-                <label>{form.phone.length}/12</label>
+            <div className="field-heading">
+                    <label>Phone number</label>
+                <span>{form.phone.length}/12</span>
+            </div>
                 <input type="number"
                  placeholder="+265 999 234 564"
                  maxLength={12}
@@ -26,7 +28,9 @@ export default function ContactStep({errors, form, updateField}){
             </div>
 
             <div className="form-group">
-                <label>Email <span>(optional)</span></label>
+                <div className="field-heading">
+                    <label>Email <span>(optional)</span></label>
+                </div>
                 <input type="email" value={form.email}
                 className={errors.email ? "input-error" : ""}
                 placeholder="johnbanda@gmail.com"
@@ -34,13 +38,18 @@ export default function ContactStep({errors, form, updateField}){
             </div>
 
             <div className="form-group">
-                <label>whatsapp <span>(optional)</span></label>
+             <div className="field-heading">
+                   <label>whatsapp <span>(optional)</span></label>
+             </div>
                 <input type="number" value={form.whatsapp}
                 onChange={(e)=>updateField("whatsapp", e.target.value)} placeholder="+265999 99 88 122" />
             </div>
 
             <div className="form-group">
-                <label>Website <span>(optional)</span></label>
+                <div className="field-heading">
+                      <label>Website <span>(optional)</span></label>
+                </div>
+              
                 <input type="text" value={form.website}
                 onChange={(e)=>updateField("website", e.target.value)} placeholder="www.feliescafe.com" />
             </div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LuArrowRight, LuHouse, LuLogOut, LuPlus, LuSettings2, LuUser } from "react-icons/lu";
 import { NavLink, useNavigate } from "react-router-dom";
-import "../Create Styles/Topbar.css";
+import "../Styles/Layout.css";
 
 import { useLoading } from "../Contexts/Loading Context";
 import { useAuth } from "../Contexts/Auth";
@@ -10,7 +10,6 @@ export default function Topbar(){
 
     const topbarNavigators = [
         {name: "Home", key:1, icon: LuHouse, path: "/home"},
-        {name: "Profile", key: 2, icon: LuUser, path: "/profile"},
         {name: "Settings", key:3, icon: LuSettings2, path: "/settings"},
     ]
 
@@ -57,7 +56,8 @@ export default function Topbar(){
     }
 
     return(
-        <div className="home-topbar">
+      <header>
+         <h2 onClick={()=>navigate("/home")}>NEXA</h2>
            <div className="topbar-buttons">
             {topbarNavigators.map(btn => (
                 <NavLink
@@ -95,6 +95,7 @@ export default function Topbar(){
             </div>
 
            </div>
-        </div>
+        
+      </header>
     )
 }

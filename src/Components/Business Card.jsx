@@ -12,7 +12,7 @@ export default function BusinessCard({ business }) {
     };
 
     return (
-        <button className="business-card" onClick={handleOpen}>
+        <button className="business-card-home" onClick={handleOpen}>
             <div className="business-card-logo">
                 {business.logo_url ? (
                     <img
@@ -21,20 +21,15 @@ export default function BusinessCard({ business }) {
                     />
                 ) : (
                     <span>
+
                         {business.name?.charAt(0).toUpperCase()}
                     </span>
                 )}
             </div>
 
-            <div className="business-card-info">
+            <div className="business-card-home-info">
                 <h3>{business.name}</h3>
-
-                {business.category && (
-                    <p className="business-category">
-                        {business.category}
-                    </p>
-                )}
-
+                <span>{business.category}</span>
                 {business.city && (
                     <span className="business-location">
                         <LuMapPin />
@@ -43,7 +38,7 @@ export default function BusinessCard({ business }) {
                 )}
             </div>
 
-            <div className="business-card-arrow">
+            <div className="business-card-home-arrow">
                 <LuArrowRight />
             </div>
         </button>

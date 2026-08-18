@@ -1,0 +1,109 @@
+header{
+    height: 70px;
+    background: linear-gradient(to right, var(--nexa-surface), var(--nexa-surface-muted), var(--nexa-surface-blue));
+    box-shadow: var(--nexa-shadow-sm);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    z-index: 2;
+}
+
+header .topbar-buttons{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2{
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+header h2:hover{
+    color: var(--nexa-primary);
+}
+
+.topbar-buttons .topbar-tab{
+    padding: 8px;
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: var(--nexa-text);
+    display: flex;
+    align-items: center;
+    border-radius: var(--nexa-radius-lg);
+}
+
+.topbar-tab.active{
+    background: var(--nexa-primary);
+    color: #fff;
+}
+
+.topbar-tab:hover{
+    border-color: var(--nexa-text-muted);
+}
+
+.signout-overlay{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.signout-overlay .signout-menu{
+    background: #fff;
+    padding: 24px;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: var(--nexa-radius-md);
+    box-shadow: var(--nexa-shadow-sm);
+    position: relative;
+    gap: 8px;
+    animation: slideUp .3s ease;
+}
+
+.signout-menu .line{
+    position: absolute;
+    top: 6px;
+    padding: 2px;
+    background: var(--nexa-text);
+    border-radius: var(--nexa-radius-lg);
+    width: 30px;
+    cursor: pointer;
+}
+
+.signout-menu h4{
+    font-family: Manrope;
+}
+
+.signout-menu button{
+    padding: 8px;
+    border-radius: var(--nexa-radius-sm);
+    width: 100%;
+    color: var(--nexa-primary);
+    border: 1px solid var(--nexa-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.signout-menu button:hover{
+    background: var(--nexa-primary);
+    color: #fff;
+}
