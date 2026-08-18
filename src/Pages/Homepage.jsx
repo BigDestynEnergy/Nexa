@@ -25,7 +25,6 @@ export default function Homepage(){
         .from("businesses")
         .select("*")
         .eq("user_id", user.id)
-        .maybeSingle();
 
     if (error) {
         console.error("Business fetch error:", error);
@@ -60,15 +59,20 @@ export default function Homepage(){
                 </button>
 
               <div className="business-list">
-    <h4>YOUR BUSINESS</h4>
+    <div className="business-list-topbar">
+        <h4>Your Businesses</h4>
+        <label>Manage Businesses</label>
+    </div>
 
-    {businessData ? (
-        <BusinessCard business={businessData} />
+   <div className="business-grid">
+     {businessData ? (
+        businessData.map((business) => (<BusinessCard key={business.id} business={business} />))
     ) : (
         <span>
             Nothing here yet. Your business profile will show up here.
         </span>
     )}
+   </div>
 </div>
             </div>
 

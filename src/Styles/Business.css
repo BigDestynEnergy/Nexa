@@ -11,8 +11,7 @@
 }
 
 .business-card-home:hover{
-    transform: scale(0.95);
-    border-color: var(--nexa-text);
+    transform: scale(0.99);
 }
 
 .business-card-home img{
@@ -34,7 +33,7 @@
 
 .business-card-home-arrow{
     padding: 16px;
-    background: var(--nexa-surface-subtle);
+    background: transparent;
     border: 1px solid transparent;
     display: flex;
     cursor: pointer;
@@ -42,6 +41,10 @@
     border-radius: var(--nexa-radius-sm);
 }
 
+.business-card-home:hover .business-card-home-arrow{
+    border-color: var(--nexa-primary);
+}
+
 .business-card-home-arrow:hover{
-    border-color: var(--nexa-text);
+    border-color: var(--nexa-primary);
 }

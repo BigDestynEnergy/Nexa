@@ -57,8 +57,41 @@
 
 .home-card .business-list{
     margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.business-list .business-list-topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.business-list-topbar label{
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: var(--nexa-primary);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.business-list .business-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 840px;
+    gap: 8px;
 }
 
 .business-list span{
     color: var(--nexa-text-muted);
+    
+}
+
+
+@media(max-width: 568px){
+    .business-grid{
+        max-width: 600px;
+    }
 }
