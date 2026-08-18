@@ -10,6 +10,7 @@ import Settings from "../Pages/Settings";
 import Profile from "../Pages/Profile";
 import ProtectedRoute from "./Protected Route";
 import PublicRoute from "./Public Route";
+import BusinessPage from "../Components/ParamRoute";
 
 export default function ApplicationRouter(){
     return(
@@ -24,9 +25,10 @@ export default function ApplicationRouter(){
            <Route element={<AppLayout/>}>
              <Route path="/home" element={<Homepage/>}/>
             <Route path="/create" element={<CreateBusiness/>}/>
-                 <Route path="settings" element={<Settings/>}/>
+            <Route path="settings" element={<Settings/>}/>
             <Route path="profile" element={<Profile/>}/>
             </Route>
+            <Route path="/nexa/:id" element={<BusinessPage/>}/>
             </Route>
 
             <Route path="*" element={<NotFound/>}/>

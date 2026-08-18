@@ -1,0 +1,199 @@
+.contact {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    margin-bottom: 20px;
+}
+
+.contact-heading h1 {
+    margin-bottom: 9px;
+
+    color: var(--nexa-text-active);
+
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -.8px;
+}
+
+.contact-heading p {
+    max-width: 600px;
+
+    color: var(--nexa-text-muted);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM CONTAINER
+========================= */
+
+.contact-form {
+    padding: 30px;
+
+    border: 1px solid var(--nexa-border);
+    border-radius: var(--nexa-radius-lg);
+
+    background: var(--nexa-surface);
+
+    box-shadow: var(--nexa-shadow-sm);
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.contact .form-group {
+    margin-bottom: 28px;
+}
+
+.contact .form-group:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   LABEL ROW
+========================= */
+
+.contact .field-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.contact .field-heading label {
+    margin: 0;
+
+    color: var(--nexa-text-active);
+
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.contact .field-heading label span {
+    color: var(--nexa-text-muted-xl);
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/* =========================
+   CHARACTER COUNT
+========================= */
+
+.character-count {
+    color: var(--nexa-text-muted-xl);
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.contact input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--nexa-border);
+    border-radius: var(--nexa-radius-sm);
+
+    background: var(--nexa-surface);
+    color: var(--nexa-text-active);
+
+    font-size: 14px;
+
+    box-shadow: var(--nexa-shadow-sm);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.contact input::placeholder {
+    color: var(--nexa-text-muted-xl);
+}
+
+.contact input:hover {
+    border-color: var(--nexa-border-muted);
+}
+
+.contact input:focus {
+    border-color: var(--nexa-primary);
+
+    background: var(--nexa-white);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 125, 82, .10);
+}
+
+
+/* =========================
+   HINT
+========================= */
+
+.field-hint {
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--nexa-text-muted-xl);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   ERRORS
+========================= */
+
+.contact .input-error {
+    border-color: var(--nexa-danger) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(220, 38, 38, .07) !important;
+}
+
+.contact .error-message {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--nexa-danger);
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+
+
+
+@media (max-width: 760px) {
+
+    .contact {
+        padding: 32px 20px 50px;
+    }
+
+    .contact-heading h1 {
+        font-size: 28px;
+    }
+
+    .contact-form {
+        padding: 22px 20px;
+    }
+}

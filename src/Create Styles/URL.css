@@ -1,0 +1,266 @@
+.url {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 48px 40px 70px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.url-heading {
+    margin-bottom: 42px;
+}
+
+.url-heading h1 {
+    margin-bottom: 9px;
+
+    color: var(--nexa-text-active);
+
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -.8px;
+}
+
+.url-heading p {
+    max-width: 600px;
+
+    color: var(--nexa-text-muted);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.url-card {
+    padding: 30px;
+
+    border: 1px solid var(--nexa-border);
+    border-radius: var(--nexa-radius-lg);
+
+    background: var(--nexa-surface);
+
+    box-shadow: var(--nexa-shadow-sm);
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.url .form-group {
+    margin: 0;
+}
+
+.url .form-group > label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--nexa-text-active);
+
+    font-size: 14px;
+    font-weight: 650;
+}
+
+
+/* =========================
+   URL INPUT
+========================= */
+
+.url-input {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 52px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--nexa-border);
+    border-radius: var(--nexa-radius-sm);
+
+    background: var(--nexa-surface);
+
+    box-shadow: var(--nexa-shadow-sm);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.url-input:focus-within {
+    border-color: var(--nexa-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 125, 82, .10);
+}
+
+
+/* PREFIX */
+
+.url-prefix {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 0 0 15px;
+
+    color: var(--nexa-text-muted);
+
+    background: var(--nexa-surface);
+
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/* INPUT */
+
+.url-input input {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 15px 0 4px;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--nexa-text-active);
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.url-input input::placeholder {
+    color: var(--nexa-text-muted-xl);
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.url-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 9px;
+
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    flex: 0 0 6px;
+
+    border-radius: 50%;
+}
+
+.url-status.available {
+    color: var(--nexa-primary);
+}
+
+.url-status.available .status-dot {
+    background: var(--nexa-primary);
+}
+
+.url-status.unavailable {
+    color: var(--nexa-danger);
+}
+
+.url-status.unavailable .status-dot {
+    background: var(--nexa-danger);
+}
+
+.url-status.idle {
+    color: var(--nexa-text-muted-xl);
+}
+
+.url-status.idle .status-dot {
+    background: var(--nexa-text-muted-xl);
+}
+
+
+/* =========================
+   PREVIEW
+========================= */
+
+.url-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    margin-top: 32px;
+    padding: 20px;
+
+    border: 1px solid var(--nexa-border);
+    border-radius: var(--nexa-radius-md);
+
+    background: var(--nexa-primary-light);
+}
+
+.url-preview span {
+    color: var(--nexa-primary);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
+.url-preview strong {
+    color: var(--nexa-text-dull);
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.url-preview b {
+    color: var(--nexa-primary);
+
+    font-weight: 650;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+
+    .url {
+        padding: 32px 20px 50px;
+    }
+
+    .url-heading h1 {
+        font-size: 28px;
+    }
+
+    .url-card {
+        padding: 22px 20px;
+    }
+
+    .url-prefix {
+        padding-left: 12px;
+
+        font-size: 13px;
+    }
+
+    .url-input input {
+        font-size: 13px;
+    }
+}

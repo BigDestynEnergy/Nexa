@@ -49,8 +49,10 @@ export const validateStep = (step, data) => {
         case 5:
             if(!data.slug.trim()){
                 errors.slug = 'Choose a Nexa URL'
-            } else if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.slug)){
-                errors.slug = "Use lowercase letters, numbers and hyphens only";
+            } else if(/[A-Z]/.test(data.slug)){
+                errors.slug = "Use lowercase letters only.";
+            } else if(/[0-9]/.test(data.slug)){
+                errors.slug = "No numbers allowed"
             }
             break;
 
