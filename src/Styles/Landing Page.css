@@ -48,19 +48,9 @@
   color: var(--nexa-white);
 }
 
-.btns button:last-child {
-  border: 1px solid var(--nexa-black);
-  background: transparent;
-}
 
 .landing-topbar button:first-child:hover {
   background: var(--nexa-primary);
-  transform: translateY(-2px);
-}
-
-.landing-topbar button:last-child:hover {
-  background: var(--nexa-black);
-  color: var(--nexa-white);
   transform: translateY(-2px);
 }
 

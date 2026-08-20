@@ -25,36 +25,27 @@
     font-size: 16px;
     font-weight: 600;
 }
-
 .url-input{
+    border: 2px solid var(--nexa-black);
     display: flex;
+    max-width: 500px;
     align-items: center;
     position: relative;
-    width: 100%;
-    border-radius: var(--nexa-radius-md);
-    border: 2px solid var(--nexa-text-muted);
-    height: 52px;
+    padding: 12px;
+    gap: 8px;
+    border-radius: var(--nexa-radius-sm);
+}
+
+.url-prefix{
+    font-size: 14px;
+    font-family: Manrope;
+    font-weight: 500;
 }
 
 .url-input input{
     width: 100%;
     border: none;
-    padding: 10px;
-    background: none;
-}
-
-.url-prefix{
-    background: var(--nexa-surface-muted);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    width: 30%;
-    margin-left: 0px;
-    border-top-left-radius: 14px;
-    border-bottom-left-radius: 14px;
-    font-size: 14px;
-    text-align: center;
-    justify-content: center;
+    background: transparent;
 }
 
 .url-status{

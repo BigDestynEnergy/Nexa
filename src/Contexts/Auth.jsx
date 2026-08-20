@@ -57,6 +57,7 @@ export function AuthProvider({ children }) {
         return { error: null };
     }
 
+    
     return (
         <AuthenticationContext.Provider
             value={{

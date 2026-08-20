@@ -46,8 +46,7 @@ export default function LandingPage() {
       <div className="landing-topbar">
         <h2>Nexa</h2>
         <div className="btns">
-            <button onClick={()=>navigate("/signin")}>Sign in</button>
-            <button onClick={()=>navigate("/signup")}>Sign up</button>
+            <button onClick={()=>navigate("/signup")}>Get Started</button>
         </div>
       </div>
 
@@ -63,13 +62,13 @@ export default function LandingPage() {
         <p>
           Nexa helps small businesses, brands, groups and communities create a
           simple digital presence for their business, mission, services and
-          products — without needing to build their own website.
+          products, without needing to build their own website.
         </p>
       </div>
 
       <div className="cta-buttons">
-        <button onClick={()=>navigate("/signup")}>
-          Get Started <LuArrowUpRight />
+        <button onClick={()=>navigate("/explore")}>
+          Explore Businesses <LuArrowUpRight />
         </button>
         <button onClick={scrollToRef}>
             Learn More

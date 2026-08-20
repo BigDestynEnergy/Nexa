@@ -5,7 +5,6 @@ export default function Loading({isOpen}){
     return(
         <div className="loading-overlay">
             <div className="card">
-                <div className="line"></div>
                 <div className="spinner"></div>
                 <span>Please wait...</span>
             </div>

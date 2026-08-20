@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { LuArrowRight, LuHouse, LuLogOut, LuPlus, LuSettings2, LuUser } from "react-icons/lu";
+import { LuArrowRight, LuHouse, LuLogOut, LuPlus, LuSettings, LuSettings2, LuUser } from "react-icons/lu";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../Styles/Layout.css";
 
@@ -10,7 +10,7 @@ export default function Topbar(){
 
     const topbarNavigators = [
         {name: "Home", key:1, icon: LuHouse, path: "/home"},
-        {name: "Settings", key:3, icon: LuSettings2, path: "/settings"},
+        {name: "Settings", key:3, icon: LuSettings, path: "/settings"},
     ]
 
     const outsideClickRef = useRef();

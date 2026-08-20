@@ -11,6 +11,7 @@ import ProtectedRoute from "./Protected Route";
 import PublicRoute from "./Public Route";
 import BusinessPage from "../Components/ParamRoute";
 import SwitchAccount from "../Components/Switch Account";
+import ExplorePage from "../public pages/Explore";
 
 export default function ApplicationRouter(){
     return(
@@ -19,7 +20,10 @@ export default function ApplicationRouter(){
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/" element={<LandingPage/>}/>
+            
             </Route>
+
+            <Route path="/explore" element={<ExplorePage/>}/>
             
            <Route element={<ProtectedRoute/>}>
            <Route element={<AppLayout/>}>

@@ -61,7 +61,7 @@ const backRef = useRef();
 
 const navigate =useNavigate();
 
-const [currentStep, setCurrentStep] = useState(1);
+const [currentStep, setCurrentStep] = useState(5);
 
 const [errors, setErrors] = useState({});
 
